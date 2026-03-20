@@ -42,6 +42,7 @@ class ContactoSimTest {
 		datos.put(1, 2);
 		DatosSolicitud ds = new DatosSolicitud(datos);
 		int ticket = contactoSim.solicitarSimulation(ds);
+		assertNotEquals(0, ticket, "No puede ser 0");
 		assertNotNull(contactoSim.descargarDatos(ticket));
 	}
 
